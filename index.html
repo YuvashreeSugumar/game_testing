@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pastel Guardians — PWA</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#ff8dab"><link rel="icon" href="assets/icons/icon-192.png" sizes="192x192"><link rel="apple-touch-icon" href="assets/icons/icon-192.png"><link rel="stylesheet" href="style.css"></head><body>
+<header class="header">
+  <img src="assets/ui/banner.png" alt="banner" class="banner">
+  <div class="top-controls">
+    <div class="modes"><label><input type="checkbox" id="themeToggle"> Dark mode</label></div>
+    <div class="install-area"><button id="installBtn" class="pill">Install</button><button id="soundBtn" class="pill">🔈</button></div>
+  </div>
+</header>
+<main class="main">
+  <nav class="tabs" role="navigation" aria-label="Games">
+    <button class="tab active" data-tab="rhyme">Rhyming</button>
+    <button class="tab" data-tab="memword">Memory Word</button>
+    <button class="tab" data-tab="missing">Missing Item</button>
+    <button class="tab" data-tab="money">Money Match</button>
+    <button class="tab" data-tab="spot">Spot the Difference</button>
+  </nav>
+  <section id="panel-rhyme" class="panel active">
+    <div class="controls">
+      <label>Level: <select id="rhymeLevel"><option value="1">1 (easy)</option><option value="2">2</option><option value="3">3 (hard)</option></select></label>
+      <button id="rhymeNext" class="pill">Next</button>
+      <span>Score: <b id="rhymeScore">0</b></span>
+    </div>
+    <div class="game card"><div id="rhymePrompt" class="prompt">Word</div><div id="rhymeChoices" class="choices"></div><div id="rhymeMsg" class="msg"></div></div>
+  </section>
+  <section id="panel-memword" class="panel">
+    <div class="controls"><label>Level: <select id="mwLevel"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label><button id="mwNew" class="pill">New</button><span>Moves: <b id="mwMoves">0</b></span></div>
+    <div id="mwGrid" class="grid"></div><div id="mwMsg" class="msg"></div>
+  </section>
+  <section id="panel-missing" class="panel">
+    <div class="controls"><label>Level: <select id="missLevel"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label><button id="missStart" class="pill">Start</button><span>Round: <b id="missRound">0</b></span></div>
+    <div id="missTray" class="tray"></div><div id="missChoices" class="choices"></div><div id="missMsg" class="msg"></div>
+  </section>
+  <section id="panel-money" class="panel">
+    <div class="controls"><label>Level: <select id="moneyLevel"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label><button id="moneyNew" class="pill">New</button><span>Correct: <b id="moneyScore">0</b></span></div>
+    <div id="moneyGrid" class="grid money"></div><div id="moneyMsg" class="msg"></div>
+  </section>
+  <section id="panel-spot" class="panel">
+    <div class="controls"><label>Level: <select id="spotLevel"><option value="1">1</option><option value="2">2</option></select></label><button id="spotNew" class="pill">New Scene</button><span>Found: <b id="spotFound">0</b>/6</span></div>
+    <div class="spot"><img id="spotA" src="assets/spot/scene1_A.png" class="spot-img" alt="A"/><img id="spotB" src="assets/spot/scene1_B.png" class="spot-img" alt="B"/></div><div id="spotMsg" class="msg"></div>
+  </section>
+</main>
+<footer class="footer"><div class="advice"><h3>Healthy Phone Use Tips</h3><ul><li>Take a 10–15 minute break every hour of continuous use.</li><li>Keep screen brightness at comfortable levels; use night mode in the evening.</li><li>Stretch and look at distant objects every 20 minutes to relax your eyes.</li><li>Balance screen time with outdoor play and reading.</li></ul></div><small>Designed for ages 5–15 • Gentle pastels • No ads • Works offline</small></footer>
+<script src="script.js"></script></body></html>
