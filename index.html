@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pink & Masks Challenge — Kids PWA</title>
+  <link rel="manifest" href="manifest.webmanifest"/>
+  <meta name="theme-color" content="#ff69b4"/>
+  <link rel="icon" href="assets/icons/icon-192.png" sizes="192x192"/>
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="app-header">
+    <h1>💗 Pink & Masks Challenge</h1>
+    <nav class="tabs" aria-label="Games">
+      <button class="tab active" data-tab="rhyme">Rhyming Words</button>
+      <button class="tab" data-tab="memword">Memory Words</button>
+      <button class="tab" data-tab="missing">Missing Item</button>
+      <button class="tab" data-tab="money">Money Match</button>
+      <button class="tab" data-tab="spot">Spot the Difference</button>
+    </nav>
+    <div class="actions">
+      <button id="installBtn" class="btn small">Install</button>
+      <button id="soundBtn" class="btn small">🔈</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="panel-rhyme" class="panel active">
+      <div class="controls">
+        <div class="control-row">
+          <span class="title">Find the rhyme!</span>
+          <button id="nextRhyme" class="btn">Next</button>
+          <span>Score: <b id="rhymeScore">0</b></span>
+        </div>
+      </div>
+      <div class="game-card">
+        <div id="rhymePrompt" class="prompt">Word</div>
+        <div class="answers" id="rhymeAnswers"></div>
+        <div id="rhymeFeedback" class="feedback" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="panel-memword" class="panel">
+      <div class="controls">
+        <div class="control-row">
+          <span class="title">Match word to meaning</span>
+          <button id="newMemWord" class="btn">New Round</button>
+          <span>Moves: <b id="mwMoves">0</b></span>
+        </div>
+      </div>
+      <div id="mwGrid" class="grid"></div>
+      <div id="mwFeedback" class="feedback"></div>
+    </section>
+
+    <section id="panel-missing" class="panel">
+      <div class="controls">
+        <div class="control-row">
+          <span class="title">Look, Memorize, Guess!</span>
+          <button id="missStart" class="btn">Start</button>
+          <span>Round: <b id="missRound">0</b></span>
+        </div>
+      </div>
+      <div class="missing-wrap">
+        <div class="tray" id="missTray"></div>
+        <div class="answers" id="missChoices"></div>
+        <div id="missFeedback" class="feedback"></div>
+      </div>
+    </section>
+
+    <section id="panel-money" class="panel">
+      <div class="controls">
+        <div class="control-row">
+          <span class="title">Match price to coins</span>
+          <button id="newMoney" class="btn">New Round</button>
+          <span>Correct: <b id="moneyScore">0</b></span>
+        </div>
+      </div>
+      <div id="moneyGrid" class="grid money"></div>
+      <div id="moneyFeedback" class="feedback"></div>
+    </section>
+
+    <section id="panel-spot" class="panel">
+      <div class="controls">
+        <div class="control-row">
+          <span class="title">Find 6 differences!</span>
+          <button id="spotNew" class="btn">New Scene</button>
+          <span>Found: <b id="spotFound">0</b>/6</span>
+        </div>
+      </div>
+      <div class="spot-wrap" style="position:relative">
+        <img id="spotA" alt="Scene A" class="spot-img" src="assets/spot/scene1_A.png"/>
+        <img id="spotB" alt="Scene B" class="spot-img" src="assets/spot/scene1_B.png"/>
+      </div>
+      <div id="spotFeedback" class="feedback"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Age 8–13 • Positive, ad‑free, offline‑ready • Original art</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

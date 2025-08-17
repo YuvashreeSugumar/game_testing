@@ -1,0 +1,34 @@
+*{box-sizing:border-box}
+:root{--pink:#ff69b4;--light:#ffe4ef;--dark:#d63384;--text:#381235}
+html,body{height:100%}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial;color:var(--text);
+  background:linear-gradient(180deg,#fff,var(--light));}
+.app-header,.app-footer{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#fff0f7;border-bottom:3px solid var(--pink)}
+.app-footer{border-top:3px solid var(--pink);border-bottom:none;justify-content:center}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{border:2px solid var(--pink);background:#fff;border-radius:999px;padding:6px 12px;cursor:pointer}
+.tab.active{background:var(--pink);color:#fff}
+.actions{display:flex;gap:8px}
+.btn{background:var(--pink);border:0;color:#fff;padding:8px 14px;border-radius:999px;font-weight:700;box-shadow:0 4px 0 var(--dark);cursor:pointer}
+.btn.small{padding:6px 10px;font-size:.9rem}
+.btn:active{transform:translateY(1px);box-shadow:0 3px 0 var(--dark)}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+.controls{background:#fff;border:2px solid var(--pink);border-radius:16px;padding:12px;box-shadow:0 6px 0 var(--pink);margin-bottom:12px}
+.control-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.title{font-weight:700}
+.panel{display:none}
+.panel.active{display:block}
+.answers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
+.answer{border:2px solid var(--pink);background:#fff;border-radius:14px;padding:12px;font-size:1.1rem;cursor:pointer}
+.answer:active{transform:scale(0.98)}
+.feedback{min-height:24px;text-align:center;margin-top:10px}
+.game-card{background:#fff;border:2px solid var(--pink);border-radius:16px;padding:16px}
+.prompt{text-align:center;font-size:1.6rem;margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.grid.money{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border:2px solid var(--pink);border-radius:14px;padding:12px;min-height:90px;display:grid;place-items:center;cursor:pointer}
+.missing-wrap .tray{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:6px 0}
+.missing-wrap .tray .tile{width:120px;height:120px;border:2px dashed var(--pink);border-radius:16px;display:grid;place-items:center;background:#fff}
+.missing-wrap .tile img{width:80%;height:80%;object-fit:contain}
+.spot-wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative}
+.spot-img{width:100%;height:auto;border:3px solid var(--pink);border-radius:12px}

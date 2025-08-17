@@ -1,0 +1,22 @@
+{
+  "name": "Pink & Masks Challenge",
+  "short_name": "PnM Challenge",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffe4ef",
+  "theme_color": "#ff69b4",
+  "description": "Five mini-games for ages 8\u201313: Rhyming Words, Memory Words, Missing Item, Money Match, Spot the Difference. Offline PWA.",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
