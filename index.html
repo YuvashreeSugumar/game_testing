@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pastel Fusion Games</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#ff8db3">
+  <link rel="icon" href="assets/icons/icon-192.png" sizes="192x192">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg">
+    <div class="float f1"></div><div class="float f2"></div><div class="float f3"></div><div class="float f4"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="title">🌸 Pastel Fusion Games</div>
+    <div class="actions">
+      <button id="themeToggle" class="chip">🌙</button>
+      <button id="soundToggle" class="chip">🔊</button>
+      <button id="installBtn" class="chip">⬇️ Install</button>
+    </div>
+  </header>
+
+  <main id="view">
+    <!-- Menu -->
+    <section id="menu" class="screen active">
+      <p class="subtitle">Barbie × Blackpink × Squid vibes — gentle pastels for ages 5–15</p>
+      <div class="grid-buttons">
+        <button class="game-btn heart" data-game="rhyme"><img src="assets/img/mic.png" alt=""><span>Rhyming Words</span></button>
+        <button class="game-btn puzzle" data-game="english"><img src="assets/img/puzzle.png" alt=""><span>English Puzzle</span></button>
+        <button class="game-btn magic" data-game="missing"><img src="assets/img/star.png" alt=""><span>Missing Item</span></button>
+        <button class="game-btn gem" data-game="money"><img src="assets/img/gem.png" alt=""><span>Money Memory</span></button>
+        <button class="game-btn calc" data-game="math"><img src="assets/img/calc.png" alt=""><span>Maths Quiz</span></button>
+      </div>
+      <footer class="tips">
+        <strong>Healthy phone use:</strong> Take 10–15 min breaks each hour, look far every 20 min, keep brightness comfy. 💖
+      </footer>
+    </section>
+
+    <!-- Game container (SPA) -->
+    <section id="game" class="screen">
+      <div class="game-top">
+        <button class="chip" id="backBtn">⬅️ Menu</button>
+        <div id="gameTitle" class="game-title">Game</div>
+        <div class="right">
+          <label>Level <select id="levelSelect"><option>1</option><option>2</option><option>3</option></select></label>
+          <button class="chip" id="newGameBtn">🎮 New Game</button>
+        </div>
+      </div>
+
+      <div id="tutorial" class="tutorial">
+        <div class="card">
+          <h3 id="tutorialTitle">How to play</h3>
+          <p id="tutorialText">Read the instruction then press Start.</p>
+          <button id="startBtn" class="cta">Start</button>
+        </div>
+      </div>
+
+      <div id="gameArea" class="game-area hidden"></div>
+      <div id="gameMsg" class="msg"></div>
+    </section>
+  </main>
+
+  <script src="ui.js"></script>
+  <script src="games.js"></script>
+</body>
+</html>
